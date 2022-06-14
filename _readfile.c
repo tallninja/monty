@@ -19,6 +19,7 @@ char *_readfile(char *filename, size_t bytes)
 		free(buff);
 		return (NULL);
 	}
-
+	
+	close(fd);
 	return (buff);
 }
