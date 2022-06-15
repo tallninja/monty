@@ -11,7 +11,7 @@ int monty(char *script)
 	stack_t call_stack = NULL;
 	char *line = NULL;
 	unsigned int len = 0, exit_status = EXIT_SUCCESS, line_num = 0;
-	void (*op_func)(stack_t**, unsigned int);
+	void (*opfunc)(stack_t**, unsigned int);
 
 	call_stack = malloc(sizeof(stack_t));
 	if (call_stack == NULL)
@@ -33,7 +33,7 @@ int monty(char *script)
 			free_tokens();
 			continue;
 		}
-		op_func = _getopfunc(tokens[o]);
+		opfunc = getopfunc(tokens[o]);
 		if (op_func == NULL) /* if opcode does not exist */
 		{
 			free_stack(&stack);
@@ -42,7 +42,7 @@ int monty(char *script)
 			break;
 		}
 		prev_token_len = get_arr_token_len();
-		opcode(&stack, line_num);
+		opfunc(&stack, line_num);
 		if (get_arr_token_len() != prev_token_len)
 		{
 			if (op_toks && op_toks[prev_tok_len])
