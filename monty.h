@@ -39,6 +39,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int monty(char *script);
 char *_readfile(char *filename, size_t bytes);
 int _strcmp(char s1, char s2);
 void (*_getopfunc(char *opcode))(instruction_s, unsigned int);

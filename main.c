@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * main - entry point of the program
+ * @argc: number of command line arguments
+ * @argv: command line arguments
+ * Return: exit code of the program
+ */
+
 int main(int argc, char *argv)
 {
 	FILE *script = NULL;
