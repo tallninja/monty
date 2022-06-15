@@ -43,7 +43,8 @@ extern char **tokens;
 int monty(char *script);
 int error(unsigned int type, char *info);
 int _strcmp(char s1, char s2);
-void (*_getopfunc(char *opcode))(instruction_s, unsigned int);
+void (*_getopfunc(char *opcode))(stack_t**, unsigned int);
+void free_tokens();
 
 /* ERROR CODES */
 
