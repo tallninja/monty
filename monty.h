@@ -1,9 +1,14 @@
 #ifndef __MONTY_H__
 #define __MONTY_H__
+#define _POSIX_C_SOURCE 200809L
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #define STACK 0
 #define QUEUE 1
@@ -48,7 +53,7 @@ int init_stack(stack_t **stack);
 int check_mode(stack_t *stack);
 void free_tokens(void);
 unsigned int token_arr_len(void);
-int run_monty(FILE *script_fd);
+int monty(FILE *script_fd);
 void set_op_tok_error(int error_code);
 
 /* OPCODE FUNCTIONS */
