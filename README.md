@@ -1,1 +1,0 @@
-# Monty Language Interpreter
