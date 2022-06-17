@@ -279,3 +279,48 @@ Implement the `nop` opcode.
 The opcode `nop` doesn’t do anything.
 
 Usage: `nop`
+
+### 6. sub
+
+Implement the `sub` opcode.
+
+**The sub opcode**
+
+The opcode `sub` subtracts the top element of the stack from the second top element of the stack.
+
+- Usage: `sub`
+- If the stack contains less than two elements, print the error message `L<line_number>: can't sub, stack too short`, followed by a new line, and exit with the status `EXIT_FAILURE`
+The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+    - The top element of the stack contains the result
+    - The stack is one element shorter
+
+```text
+julien@ubuntu:~/monty$ cat bytecodes/19.m 
+push 1
+push 2
+push 10
+push 3
+sub
+pall
+julien@ubuntu:~/monty$ ./monty bytecodes/19.m 
+7
+2
+1
+julien@ubuntu:~/monty$
+```
+
+### 7. div
+
+Implement the `div` opcode.
+
+**The div opcode**
+
+The opcode `div` divides the second top element of the stack by the top element of the stack.
+
+- Usage: `div`
+- If the stack contains less than two elements, print the error message `L<line_number>: can't div, stack too short`, followed by a new line, and exit with the status `EXIT_FAILURE`
+- The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+    - The top element of the stack contains the result
+    - The stack is one element shorter
+- If the top element of the stack is `0`, print the error message `L<line_number>: division by zero`, followed by a new line, and exit with the status `EXIT_FAILURE`
+
