@@ -541,3 +541,29 @@ julien@ubuntu:~/monty$ ./monty bytecodes/47.m
 julien@ubuntu:~/monty$
 ```
 
+### 16. Brainf*ck
+
+Write a Brainf*ck script that prints `School`, followed by a new line.
+
+- All your Brainf*ck files should be stored inside the `bf` sub directory
+- You can install the `bf` interpreter to test your code: `sudo apt-get install bf`
+- Read: [Brainf*ck](https://en.wikipedia.org/wiki/Brainfuck)
+
+```text
+julien@ubuntu:~/monty/bf$ bf 1000-school.bf 
+School
+julien@ubuntu:~/monty/bf$
+```
+
+### 17. Add two digits
+
+Add two digits given by the user.
+
+- Read the two digits from stdin, add them, and print the result
+- The total of the two digits with be one digit-long (<10)
+
+```text
+julien@ubuntu:~/monty/bf$ bf ./1001-add.bf
+81
+9julien@ubuntu:~/monty/bf$
+```
