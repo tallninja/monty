@@ -567,3 +567,29 @@ julien@ubuntu:~/monty/bf$ bf ./1001-add.bf
 81
 9julien@ubuntu:~/monty/bf$
 ```
+
+### 18. Multiplication
+
+Multiply two digits given by the user.
+
+- Read the two digits from stdin, multiply them, and print the result
+- The result of the multiplication will be one digit-long (<10)
+
+```text
+julien@ubuntu:~/monty/bf$ bf 1002-mul.bf
+24
+8julien@ubuntu:~/monty/bf$
+```
+
+### 19. Multiplication level up
+
+Multiply two digits given by the user.
+
+- Read the two digits from stdin, multiply them, and print the result, followed by a new line
+
+```text
+julien@ubuntu:~/monty/bf$ bf 1003-mul.bf 
+77
+49
+julien@ubuntu:~/monty/bf$
+```
