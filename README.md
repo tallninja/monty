@@ -479,3 +479,65 @@ The opcode `rotr` rotates the stack to the bottom.
 - The last element of the stack becomes the top element of the stack
 - `rotr` never fails
 
+### 15. stack, queue
+
+Implement the `stack` and `queue` opcodes.
+
+**The stack opcode**
+
+The opcode `stack` sets the format of the data to a stack (LIFO). This is the default behavior of the program.
+
+- Usage: `stack`
+
+**The queue opcode**
+
+The opcode `queue` sets the format of the data to a queue (FIFO).
+
+- Usage: `queue`
+
+When switching mode:
+
+- The top of the stack becomes the front of the queue
+- The front of the queue becomes the top of the stack
+
+```text
+julien@ubuntu:~/monty$ cat bytecodes/47.m
+queue
+push 1
+push 2
+push 3
+pall
+stack
+push 4
+push 5
+push 6
+pall
+add
+pall
+queue
+push 11111
+add
+pall
+julien@ubuntu:~/monty$ ./monty bytecodes/47.m
+1
+2
+3
+6
+5
+4
+1
+2
+3
+11
+4
+1
+2
+3
+15
+1
+2
+3
+11111
+julien@ubuntu:~/monty$
+```
+
