@@ -380,3 +380,40 @@ julien@ubuntu:~/monty$
 ```
 
 ### 12. pstr
+
+Implement the `pstr` opcode.
+
+**The pstr opcode**
+
+The opcode `pstr` prints the string starting at the top of the stack, followed by a new line.
+
+- Usage: `pstr`
+- The integer stored in each element of the stack is treated as the ascii value of the character to be printed
+- The string stops when either:
+    - the stack is over
+    - the value of the element is `0`
+    - the value of the element is not in the ascii table
+- If the stack is empty, print only a new line
+
+```text
+julien@ubuntu:~/monty$ cat bytecodes/31.m 
+push 1
+push 2
+push 3
+push 4
+push 0
+push 110
+push 0
+push 108
+push 111
+push 111
+push 104
+push 99
+push 83
+pstr
+julien@ubuntu:~/monty$ ./monty bytecodes/31.m 
+School
+julien@ubuntu:~/monty$
+```
+
+### 13. rotl
