@@ -270,3 +270,12 @@ julien@ubuntu:~/monty$ ./monty bytecodes/12.m
 julien@ubuntu:~/monty$
 ```
 
+### 5. nop
+
+Implement the `nop` opcode.
+
+**The nop opcode**
+
+The opcode `nop` doesn’t do anything.
+
+Usage: `nop`
